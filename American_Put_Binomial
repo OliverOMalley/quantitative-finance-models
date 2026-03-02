@@ -1,3 +1,45 @@
+#Monte Carlo European Call Option Pricer
+import math
+S = 100
+K = 105
+r = 0.05
+vol = 0.20
+T = 1
+simulations = 100000
+
+total_payoff = 0
+for i in range(simulations):
+  Z = random.gauss(0,1)
+  St = S * math.exp(((r - (0.5 * (vol**2))) * T) + (vol * math.sqrt(T) * Z))
+  payoff = max(St - K , 0)
+  total_payoff = total_payoff + payoff
+average_payoff = total_payoff / 100000
+Final_option_price = average_payoff * math.exp(-r*T)
+print(Final_option_price)
+
+#Scalar Processing for ECO Pricer
+import numpy as np
+import math
+
+S = 100
+K = 105
+r = 0.05
+vol = 0.20
+T = 1
+simulations = 100000
+
+Z = np.random.standard_normal(simulations)
+
+St = S * np.exp(((r - (0.5 * (vol**2))) * T) + (vol * math.sqrt(T) * Z))
+
+payoffs = np.maximum(St - K, 0)
+
+Final_option_price = np.mean(payoffs) * math.exp(-r*T)
+print(Final_option_price)
+
+#American Put Option Pricer
+
+
 import numpy as np 
 import math 
 
