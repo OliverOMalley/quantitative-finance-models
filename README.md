@@ -1,2 +1,4 @@
 # quantitative-finance-models
-Python implementations of European and American derivative pricing models using Monte Carlo simulations and Binomial Trees.
+This repository contains Python implementations of foundational quantitative finance models. As a pure mathematics student, I built these engines to translate theoretical financial mathematics (both discrete and continuous-time) into code.
+
+The first script prices a European Call Option by simulating 10000 stock price paths under a risk neautral measure.
