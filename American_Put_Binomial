@@ -1,3 +1,4 @@
+import random
 #Monte Carlo European Call Option Pricer
 import math
 S = 100
