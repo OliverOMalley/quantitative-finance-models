@@ -1,7 +1,5 @@
 #Scalar Processing for ECO Pricing
 import numpy as np
-import math
-import random
 
 S = 100
 K = 105
@@ -19,9 +17,7 @@ print(Final_option_price)
 
 
 
-#American Put Option Pricer
-import numpy as np 
-import math 
+#American Put Option Pricer  
 
 S = 100 
 K = 105 
