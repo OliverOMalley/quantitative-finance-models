@@ -9,10 +9,10 @@ T = 1
 simulations = 100000
 
 Z = np.random.standard_normal(simulations)
-St = S * np.exp(((r - (0.5 * (vol**2))) * T) + (vol * math.sqrt(T) * Z))
+St = S * np.exp(((r - (0.5 * (vol**2))) * T) + (vol * np.sqrt(T) * Z))
 payoffs = np.maximum(St - K, 0)
 
-Final_option_price = np.mean(payoffs) * math.exp(-r*T)
+Final_option_price = np.mean(payoffs) * np.exp(-r*T)
 print(Final_option_price)
 
 
@@ -27,10 +27,10 @@ T = 1
 N = 100      
 
 dt = T / N 
-u = math.exp(vol * math.sqrt(dt))
+u = np.exp(vol * np.sqrt(dt))
 d = 1 / u 
-q = (math.exp(r*dt) - d ) / (u - d)
-discount = math.exp( -r * dt ) 
+q = (np.exp(r*dt) - d ) / (u - d)
+discount = np.exp( -r * dt ) 
 
 # figuring out what the option is worth on the last day on all 101 possible ending nodes
 V = np.zeros(N+1)   
