@@ -1,4 +1,4 @@
-# quantitative-finance-models
+# Quantitative-Finance-Models
 My first attempt at coding quantitative finance models, using stuff from my uni coursework.
 
 The first script prices a European Call Option by simulating 10000 stock price paths under a risk neautral measure. I used numpy vectorization instead of for loops. It generates standard normal variables and calculates the exponential payoffs for all parallel universes simultaneously to optimize computational speed. 
