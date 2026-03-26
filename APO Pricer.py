@@ -19,7 +19,7 @@ print(Final_option_price)
 #---American Put Option Pricer---
 
 
-import numpy as np 
+
 
 S = 100 
 K = 105 
