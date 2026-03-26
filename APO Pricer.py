@@ -20,7 +20,6 @@ print(Final_option_price)
 
 
 import numpy as np 
-import math 
 
 S = 100 
 K = 105 
@@ -30,10 +29,10 @@ T = 1
 N = 100       #number of discrete steps in tree
 
 dt = T / N 
-u = math.exp(vol * math.sqrt(dt))
+u = np.exp(vol * np.sqrt(dt))
 d = 1 / u 
-q = (math.exp(r*dt) - d ) / (u - d)
-discount = math.exp( -r * dt ) 
+q = (np.exp(r*dt) - d ) / (u - d)
+discount = np.exp( -r * dt ) 
 
 # figuring out what the option is worth on the last day on all 101 possible ending nodes
 V = np.zeros(N+1)  # creating an arrray 
